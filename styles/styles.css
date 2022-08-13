@@ -68,6 +68,10 @@ a{
     color: aliceblue;
 }
 
+a:hover{
+    background-color: aliceblue;
+    color: black;
+}
 /* S E C C I O N E S--I N D E X*/
 
 h2{
