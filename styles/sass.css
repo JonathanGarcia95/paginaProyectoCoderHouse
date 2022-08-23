@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* E N C A B E Z A D O */
+.encabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.encabezado h1 {
+  color: aliceblue;
+}
+.encabezado li {
+  list-style-type: none;
+}
+.encabezado li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.encabezado li a:hover {
+  border-radius: 0.5em;
+  background-color: aliceblue;
+  color: black;
+}
+
+/* F O O T E R */
+.footerFlex {
+  height: 25vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.footerFlex .infoHorarios {
+  margin-left: 2em;
+}
+.footerFlex .datosPagina {
+  padding-left: 2em;
+}
+.footerFlex .redes li {
+  list-style-type: none;
+  margin: 1em;
+}
+
+/* L A Y O U T--G R I D--I N D E X */
+header {
+  background-color: black;
+  height: 50vh;
+  width: 100%;
+  grid-area: "header";
+}
+
+footer {
+  background-color: black;
+  color: aliceblue;
+  grid-area: "footer";
+}
+
+.seccion1 {
+  grid-area: "seccion1";
+}
+
+.seccion2 {
+  grid-area: "seccion2";
+}
+
+.seccion3 {
+  grid-area: "seccion3";
+}
+
+.bodyGrids {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "header" "seccion1" "seccion2" "seccion3" "footer";
+}
+
+/* S E C C I O N E S--I N D E X*/
+h2 {
+  text-align: center;
+  padding-bottom: 1.5em;
+}
+
+h3 {
+  padding-bottom: 1.5em;
+}
+
+.paddingtop {
+  padding-top: 1em;
+}
+
+.articulo1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 2em;
+}
+
+.fondoOscuro {
+  background-color: black;
+  box-shadow: 2px 2px 8px 4px rgba(140, 140, 140, 0.8196078431);
+}
+
+.articulo2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.div1 {
+  grid-area: 1/1/2/2;
+}
+
+.div2 {
+  grid-area: 2/1/3/2;
+}
+
+.div3 {
+  grid-area: 1/2/3/3;
+}
+
+.div1 {
+  padding: 2em;
+}
+
+.div2 {
+  padding-left: 1.5em;
+  padding-bottom: 4.5em;
+}
+
+/* M E D I A--Q U A R I E S--I N D E X */
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 1em;
+  }
+  .encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  nav ul li {
+    display: inline;
+    margin: 0.5em;
+  }
+  .articulo1 {
+    margin: 2em;
+  }
+  .articulo2 {
+    margin: 2em;
+  }
+  .footerFlex {
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .datosPagina {
+    margin-left: 1em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .encabezado {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .encabezadoLogo {
+    position: relative;
+    bottom: 1.5em;
+    left: 1.5em;
+  }
+  .encabezadoTitulo {
+    position: relative;
+    right: 4.5em;
+    top: 1em;
+  }
+  .articulo1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5em;
+    grid-row-gap: 5em;
+    align-items: start;
+  }
+  .div1Articulo1 {
+    grid-area: 1/1/2/4;
+  }
+  .div2Articulo1 {
+    grid-area: 2/1/3/2;
+  }
+  .div3Articulo1 {
+    grid-area: 2/2/3/3;
+  }
+  .div4Articulo1 {
+    grid-area: 2/3/3/4;
+  }
+}
+/* P A G I N A--T R A B A J O S */
+.contenedorVideos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedorVideos div {
+  margin-bottom: 2em;
+  transition: transform 0.2s;
+}
+
+.contenedorVideos div:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 600px) {
+  .contenedorVideos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contenedorVideos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+}
+/* P A G I N A \--T R A T A M I E N T O S */
+.centradoSection {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  align-items: center;
+  text-align: center;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px rgba(211, 211, 211, 0.8196078431);
+  border-radius: 15px;
+  margin: 1.5em 0em;
+}
+
+.tituloTarjeta {
+  padding: 10px 10px 0 10px;
+}
+
+.cuerpoTarjeta {
+  padding: 10px;
+}
+
+.parrafoTarjeta {
+  margin-top: 1em;
+}
+
+.videoMuestra {
+  margin: 1em 0em;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px 8px 4px rgba(211, 211, 211, 0.8196078431);
+}/*# sourceMappingURL=sass.css.map */

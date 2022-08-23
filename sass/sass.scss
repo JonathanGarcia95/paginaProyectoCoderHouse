@@ -1,21 +1,17 @@
+@import "variables";
+@import "generales";
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* L A Y O U T--G R I D */
+/* L A Y O U T--G R I D--I N D E X */
 
 header{
-    background-color: black;
+    background-color: $color;
     height: 50vh;
     width: 100%;
     grid-area: "header";
 }
 
 footer{
-    background-color: black;
+    background-color: $color;
     color: aliceblue;
     grid-area: "footer";
 }
@@ -32,7 +28,7 @@ footer{
     grid-area: "seccion3";
 }
 
-body{
+.bodyGrids{
     width: 100%;
     display: grid;
     grid-template-areas:
@@ -42,37 +38,9 @@ body{
         "seccion3"
         "footer"
     ;
-    font-size: 0.8em;
     
 }
 
-/* E N C A B E Z A D O */
-
-.encabezado{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-h1{
-    color: aliceblue;
-}
-
-li{
-    list-style-type: none;
-}
-
-a{
-    text-decoration: none;
-    color: aliceblue;
-}
-
-a:hover{
-    border-radius: 0.5em;
-    background-color: aliceblue;
-    color: black;
-}
 /* S E C C I O N E S--I N D E X*/
 
 h2{
@@ -126,27 +94,6 @@ h3{
 }
 
 
-/* F O O T E R */
-
-.footerFlex{
-    height: 25vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.infoHorarios{
-    margin-left: 2em;
-}
-
-.datosPagina{
-    padding-left: 2em;
-}
-
-.redes li{
-    margin: 1em;
-}
 
 /* M E D I A--Q U A R I E S--I N D E X */
 
@@ -197,7 +144,6 @@ h3{
 {
 
     .encabezado{
-        background-color: black;
         height: 20vh;
         width: 100%;
         display: flex;
@@ -233,7 +179,7 @@ h3{
     .div4Articulo1 { grid-area: 2 / 3 / 3 / 4; }
 }
 
-/* P A G I N A -- T R A B A J O S */
+/* P A G I N A--T R A B A J O S */
 
 .contenedorVideos{
     display: flex;
@@ -268,7 +214,7 @@ h3{
     }
 }
 
-/* P A G I N A -- T R A T A M I E N T O S */
+/* P A G I N A \--T R A T A M I E N T O S */
 
 .centradoSection{
     display: flex;

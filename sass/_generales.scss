@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* E N C A B E Z A D O */
+
+.encabezado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    h1{
+        color: aliceblue;
+    }
+    
+    li{
+        list-style-type: none;
+        a{
+            text-decoration: none;
+            color: aliceblue;
+            
+            &:hover{
+                border-radius: 0.5em;
+                background-color: aliceblue;
+                color: black;
+            }
+        }
+    }
+}
+
+/* F O O T E R */
+
+.footerFlex{
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    .infoHorarios{
+        margin-left: 2em;
+    }
+    
+    .datosPagina{
+        padding-left: 2em;
+    }
+    
+    .redes{
+            li{
+                list-style-type: none;
+                margin: 1em;
+            }
+        }
+}
+
