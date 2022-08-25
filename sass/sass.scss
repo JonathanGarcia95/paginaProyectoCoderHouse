@@ -3,10 +3,14 @@
 
 /* L A Y O U T--G R I D--I N D E X */
 
+@mixin sizesHeader($width, $height){
+    height: $height;
+    width: $width;
+}
+
 header{
+    @include sizesHeader(100%, 50vh);
     background-color: $color;
-    height: 50vh;
-    width: 100%;
     grid-area: "header";
 }
 
@@ -49,7 +53,7 @@ h2{
 }
 
 h3{
-    padding-bottom: 1.5em;
+    @extend h2;
 }
 
 .paddingtop{

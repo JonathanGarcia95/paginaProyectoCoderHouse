@@ -48,9 +48,9 @@
 
 /* L A Y O U T--G R I D--I N D E X */
 header {
-  background-color: black;
   height: 50vh;
   width: 100%;
+  background-color: black;
   grid-area: "header";
 }
 
@@ -79,12 +79,8 @@ footer {
 }
 
 /* S E C C I O N E S--I N D E X*/
-h2 {
+h2, h3 {
   text-align: center;
-  padding-bottom: 1.5em;
-}
-
-h3 {
   padding-bottom: 1.5em;
 }
 
