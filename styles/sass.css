@@ -176,7 +176,6 @@ h2, h3 {
     left: 1.5em;
   }
   .encabezadoTitulo {
-    position: relative;
     right: 4.5em;
     top: 1em;
   }
@@ -212,7 +211,6 @@ h2, h3 {
   margin-bottom: 2em;
   transition: transform 0.2s;
 }
-
 .contenedorVideos div:hover {
   transform: scale(1.1);
 }
@@ -231,8 +229,16 @@ h2, h3 {
     justify-items: center;
   }
 }
-/* P A G I N A \--T R A T A M I E N T O S */
-.centradoSection {
+/* P A G I N A--T R A T A M I E N T O S */
+.centradoSection1 {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  align-items: center;
+  text-align: center;
+}
+
+.centradoSection2 {
   display: flex;
   flex-direction: column;
   padding: 2em;
@@ -248,21 +254,182 @@ h2, h3 {
   border-radius: 15px;
   margin: 1.5em 0em;
 }
-
-.tituloTarjeta {
+.tarjeta .tituloTarjeta {
   padding: 10px 10px 0 10px;
 }
-
-.cuerpoTarjeta {
+.tarjeta .cuerpoTarjeta {
   padding: 10px;
 }
-
-.parrafoTarjeta {
+.tarjeta .cuerpoTarjeta img {
+  width: 100%;
+}
+.tarjeta .parrafoTarjeta {
   margin-top: 1em;
+  text-align: justify;
 }
 
 .videoMuestra {
   margin: 1em 0em;
   border-radius: 0.5em;
   box-shadow: 2px 2px 8px 4px rgba(211, 211, 211, 0.8196078431);
+}
+
+@media screen and (min-width: 1024px) {
+  .centradoSection1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .centradoSection1 h2, .centradoSection1 h3 {
+    padding-top: 0.5em;
+  }
+  .centradoSection1 p {
+    width: 70%;
+  }
+  .contenedorTarjetas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .contenedorTarjetas .tarjeta {
+    margin: 1.5em 1em;
+  }
+}
+/*P A G I N A--P R O D U C T O S*/
+.sectionProductos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 2em;
+}
+.sectionProductos .buscadorProductos form {
+  display: flex;
+  flex-direction: row;
+}
+.sectionProductos .buscadorProductos form p {
+  margin: 0;
+}
+.sectionProductos .contImagenes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (min-width: 1024px) {
+  .sectionProductos .contAsideImagenes {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 3em;
+  }
+  .sectionProductos .contAsideImagenes .contImagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .sectionProductos .contAsideImagenes .listaProductos {
+    margin-top: 1em;
+  }
+}
+/* P A G I N A--N O S O T R O S */
+.conteNosotros1 {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  align-items: center;
+  text-align: center;
+}
+
+.conteNosotros2 {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  align-items: center;
+  text-align: center;
+}
+.conteNosotros2 div img {
+  width: 100%;
+}
+.conteNosotros2 p {
+  margin-top: 1em;
+  text-align: justify;
+}
+
+@media screen and (min-width: 1024px) {
+  .art1, .art3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .art1 p, .art3 p {
+    margin-left: 2em;
+  }
+  .art2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .art2 p {
+    margin-right: 2em;
+  }
+}
+/* P A G I N A--C O N T A C T O */
+.contenedorContacto {
+  padding: 2em;
+  text-align: center;
+}
+.contenedorContacto form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(24, 24, 24, 0.98);
+  border-radius: 1em;
+  color: white;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+.contenedorContacto form legend {
+  background-color: #111111;
+  box-shadow: 0px 2px 4px black;
+  border-radius: 5px 5px 0px 0px;
+}
+.contenedorContacto form label {
+  margin: 0.5em 0em;
+}
+.contenedorContacto form input {
+  margin: 0em 2em;
+}
+.contenedorContacto form h6 {
+  margin: 1em 0em;
+}
+.contenedorContacto form textarea {
+  margin: 0em 1em;
+}
+.contenedorContacto form .contenedorBotones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 1em;
+}
+.contenedorContacto form .contenedorBotones input {
+  width: 25%;
+  border-style: none;
+  background-color: #ffffff;
+  border-radius: 2px;
+  color: rgb(0, 0, 0);
+  box-shadow: 0px 2px 5px black;
+}
+.contenedorContacto form .contenedorBotones input:hover {
+  color: #ffffff;
+  transition: 0.8s;
+}
+.contenedorContacto form .contenedorBotones .enviar:hover {
+  background-color: rgb(57, 149, 118);
+}
+.contenedorContacto form .contenedorBotones .reset:hover {
+  background-color: firebrick;
+}
+.contenedorContacto .contenedorUbicacion {
+  margin: 2em 0em;
+}
+.contenedorContacto .contenedorUbicacion h3 {
+  padding: 0;
 }/*# sourceMappingURL=sass.css.map */
