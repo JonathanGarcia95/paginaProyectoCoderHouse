@@ -44,7 +44,7 @@ h1 {
     display: none;
     line-height: 5em;
     margin: 2em 0em;
-    font-size: larger;
+    font-size: medium;
     transition: all 1s;
   }
   .encabezado nav .nav-menu li a {
@@ -52,7 +52,7 @@ h1 {
     font-weight: 600;
   }
   .encabezado nav .nav-menu li a.active, .encabezado nav .nav-menu li a:hover {
-    color: red;
+    color: black;
     transition: 0.3s;
   }
   .encabezado nav ul li {
