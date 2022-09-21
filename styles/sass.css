@@ -4,24 +4,82 @@
   font-family: "Roboto", sans-serif;
 }
 
-/* E N C A B E Z A D O */
-.encabezado {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.encabezado h1 {
+h1 {
   color: aliceblue;
 }
-.encabezado li {
+
+/* E N C A B E Z A D O */
+@media screen and (min-width: 350px) and (max-width: 600px) {
+  .encabezado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .encabezado .encabezadoLogo {
+    display: none;
+  }
+  .encabezado nav {
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .encabezado nav .bar-btn {
+    color: aliceblue;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  .encabezado nav .nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    right: 0px;
+    top: 100px;
+    background-color: black;
+    text-align: center;
+    transition: all 1s;
+  }
+  .encabezado nav .nav-menu li {
+    display: none;
+    line-height: 5em;
+    margin: 2em 0em;
+    font-size: larger;
+    transition: all 1s;
+  }
+  .encabezado nav .nav-menu li a {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .encabezado nav .nav-menu li a.active, .encabezado nav .nav-menu li a:hover {
+    color: red;
+    transition: 0.3s;
+  }
+  .encabezado nav ul li {
+    list-style: none;
+  }
+  .encabezado nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  .encabezado #check {
+    display: none;
+  }
+  .encabezado #check:checked ~ .nav-menu {
+    height: 100vh;
+  }
+  .encabezado #check:checked ~ .nav-menu li {
+    display: block;
+  }
+}
+li {
   list-style-type: none;
 }
-.encabezado li a {
+li a {
   text-decoration: none;
   color: aliceblue;
 }
-.encabezado li a:hover {
+li a:hover {
   border-radius: 0.5em;
   background-color: aliceblue;
   color: black;
@@ -46,9 +104,15 @@
   margin: 1em;
 }
 
+/* ESTILO PARA PARRAFOS EN RESOLUCIONES GRANDES */
+@media screen and (min-width: 1024px) {
+  p {
+    font-size: large;
+  }
+}
 /* L A Y O U T--G R I D--I N D E X */
 header {
-  height: 50vh;
+  height: 15vh;
   width: 100%;
   background-color: black;
   grid-area: "header";
@@ -82,6 +146,7 @@ footer {
 h2, h3 {
   text-align: center;
   padding-bottom: 1.5em;
+  font-weight: bold;
 }
 
 .paddingtop {
@@ -136,11 +201,18 @@ h2, h3 {
   body {
     font-size: 1em;
   }
+  #check {
+    display: none;
+  }
+  .bar-btn {
+    display: none;
+  }
   .encabezado {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    height: 25vh;
   }
   nav ul li {
     display: inline;
@@ -330,7 +402,7 @@ h2, h3 {
   }
 }
 /* P A G I N A--N O S O T R O S */
-.conteNosotros1 {
+.conteNosotros1, .conteNosotros2 {
   display: flex;
   flex-direction: column;
   padding: 2em;
@@ -338,15 +410,9 @@ h2, h3 {
   text-align: center;
 }
 
-.conteNosotros2 {
-  display: flex;
-  flex-direction: column;
-  padding: 2em;
-  align-items: center;
-  text-align: center;
-}
 .conteNosotros2 div img {
   width: 100%;
+  border-style: solid;
 }
 .conteNosotros2 p {
   margin-top: 1em;
